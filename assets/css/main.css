@@ -744,7 +744,7 @@ h6 {
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: var(--warna-navbar);
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -1537,7 +1537,7 @@ section,
 
 .contact .info-item i {
   font-size: 20px;
-  color: var(--accent-color);
+  color: var(--warna-navbar);
   width: 56px;
   height: 56px;
   font-size: 24px;
@@ -1547,7 +1547,7 @@ section,
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
-  border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
+  border: 2px dotted color-mix(in srgb, var(--warna-navbar), transparent 40%);
 }
 
 .contact .info-item h3 {
@@ -1558,6 +1558,7 @@ section,
 }
 
 .contact .info-item p {
+  color: var(--warna-navbar);
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
@@ -1602,7 +1603,7 @@ section,
 
 .contact .php-email-form button[type=submit] {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: var(--warna-navbar);
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
