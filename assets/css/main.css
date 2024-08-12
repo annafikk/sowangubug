@@ -962,15 +962,13 @@ section,
 
 .speakers .member .member-info {
   position: absolute;
-  padding: 0;
+  padding: 15px 0;
   inset: auto 0 -44px 0;
   background: rgba(0, 0, 0, 0.6);
   transition: 0.4s;
 }
 
 .speakers .member .member-info-content h4 {
-  padding-top: 20px;
-  padding-bottom: 60px;
   color: var(--contrast-color);
   font-weight: 700;
   margin-bottom: 4px;
@@ -983,6 +981,12 @@ section,
 
 .speakers .member .member-info-content h4 a:hover {
   color: var(--accent-color);
+}
+
+.speakers .member .member-info-content span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
 }
 
 .speakers .member .social {
@@ -1008,6 +1012,33 @@ section,
 
 .speakers .member:hover .member-info {
   bottom: 0;
+}
+
+/* Atur default untuk tampilan desktop */
+.container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Pastikan setiap card menempati 1/5 dari lebar container di desktop */
+.container .col {
+  flex: 0 0 20%;
+  max-width: 20%;
+  padding: 15px;
+}
+
+/* Media query untuk tampilan mobile */
+@media (max-width: 768px) {
+  .container .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* Untuk menghapus baris kedua pada tampilan mobile dan menampilkan satu card per baris */
+  .container .row:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1660,6 +1691,17 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+.padukuhan h5 {
+  font-size: x-large;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.padukuhan p {
+  text-align: justify;
+}
+
+.padukuhan li {
+  font-size: larger;
+  font-style: italic;
 }
