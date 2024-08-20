@@ -26,6 +26,9 @@ body {
   overflow-x: hidden;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 a {
@@ -47,11 +50,28 @@ h6 {
   font-family: var(--font-primary);
 }
 
+.btn-lihat {
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-lihat:hover {
+  background: #ffc732;
+  color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Sections & Section Header
 --------------------------------------------------------------*/
 section {
-  padding: 80px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
@@ -61,7 +81,7 @@ section {
 
 .section-header {
   text-align: center;
-  padding-bottom: 70px;
+  padding-bottom: 30px;
 }
 
 .section-header h2 {
@@ -89,12 +109,41 @@ section {
 }
 
 .section-header p {
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
+  padding: 0 15px;
+  /* Added padding for mobile view */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 0;
+    /* Reduce padding for smaller screens */
+  }
+
+  .section-header h2 {
+    font-size: 28px;
+    /* Slightly smaller font size for mobile */
+  }
+
+  .section-header h2:before,
+  .section-header h2:after {
+    width: 30px;
+    /* Adjust width for mobile view */
+  }
+
+  .section-header p {
+    padding: 0 10px;
+    /* Reduce padding for mobile view */
+    max-width: 90%;
+    /* Ensure paragraph does not exceed screen width */
+  }
 }
 
 @media (min-width: 1199px) {
   .section-header p {
     max-width: 60%;
+    /* Apply to larger screens */
   }
 }
 
@@ -966,6 +1015,15 @@ section {
   transform: scale(1.1);
 }
 
+.text-center {
+  text-align: center;
+}
+
+.my-4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
@@ -1829,25 +1887,33 @@ section {
 .hero {
   overflow-x: hidden;
   padding: 0;
+  position: relative;
+  height: 100vh;
+  /* Ensure hero section takes full viewport height */
 }
 
 .hero .carousel {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  min-height: 100vh;
-  padding: 80px 0;
-  margin: 0;
+  height: 100%;
+  z-index: 1;
+  /* Carousel behind the content */
+}
+
+.hero .carousel-inner {
   position: relative;
+  z-index: 1;
 }
 
 .hero .carousel-item {
-  position: absolute;
-  inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  overflow: hidden;
-  z-index: 1;
-  transition-duration: 0.4s;
+  height: 100vh;
+  /* Ensure full height */
+  position: relative;
+  /* Ensure it fills the container */
 }
 
 .hero .carousel-item::before {
@@ -1857,52 +1923,51 @@ section {
   inset: 0;
 }
 
-.hero .info {
-  position: absolute;
-  inset: 0;
+.hero .container {
+  position: relative;
   z-index: 2;
+  /* Ensure content is above the carousel */
 }
 
-@media (max-width: 768px) {
-  .hero .info {
-    padding: 0 50px;
-  }
+.hero .row {
+  min-height: 100vh;
+  position: relative;
+  /* Ensure row doesn't interfere with carousel controls */
+  z-index: 2;
+  /* Ensure hero content is above carousel */
 }
 
-.hero .info h2 {
+.hero .video-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .video-section iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 100%;
+  border: 0;
+  /* Remove default border */
+}
+
+.hero .text-section {
+  text-align: left;
+  padding: 0 30px;
+}
+
+.hero .text-section h2 {
   color: #fff;
-  margin-bottom: 30px;
-  padding-bottom: 30px;
   font-size: 56px;
   font-weight: 700;
-  position: relative;
 }
 
-.hero .info h2:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: var(--color-primary);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-@media (max-width: 768px) {
-  .hero .info h2 {
-    font-size: 36px;
-  }
-}
-
-.hero .info p {
+.hero .text-section p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
 }
 
-.hero .info .btn-get-started {
+.hero .text-section .btn-get-started {
   font-family: var(--font-primary);
   font-weight: 500;
   font-size: 16px;
@@ -1914,61 +1979,108 @@ section {
   margin: 10px;
   color: #fff;
   border: 2px solid var(--color-primary);
+  text-decoration: none;
+  /* Remove underline */
 }
 
-.hero .info .btn-get-started:hover {
+.hero .text-section .btn-get-started:hover {
   background: var(--color-primary);
 }
 
-.hero .carousel-control-prev {
-  justify-content: start;
-}
-
-@media (min-width: 640px) {
-  .hero .carousel-control-prev {
-    padding-left: 15px;
-  }
-}
-
-.hero .carousel-control-next {
-  justify-content: end;
-}
-
-@media (min-width: 640px) {
-  .hero .carousel-control-next {
-    padding-right: 15px;
-  }
-}
-
-.hero .carousel-control-next-icon,
-.hero .carousel-control-prev-icon {
-  background: none;
-  font-size: 26px;
-  line-height: 0;
-  background: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.6);
-  border-radius: 50px;
-  width: 54px;
-  height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
+/* Carousel Controls */
 .hero .carousel-control-prev,
 .hero .carousel-control-next {
   z-index: 3;
-  transition: 0.3s;
+  /* Ensure controls are above the carousel */
+  width: 50px;
+  /* Size of controls */
+  height: 50px;
+  /* Size of controls */
+  top: 50%;
+  /* Center vertically */
+  transform: translateY(-50%);
+  /* Center vertically */
 }
 
-.hero .carousel-control-prev:focus,
-.hero .carousel-control-next:focus {
-  opacity: 0.5;
+.hero .carousel-control-prev-icon,
+.hero .carousel-control-next-icon {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* Background color for better visibility */
+  border-radius: 50%;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
 }
 
-.hero .carousel-control-prev:hover,
-.hero .carousel-control-next:hover {
-  opacity: 0.9;
+.hero .carousel-control-prev-icon {
+  background-image: none;
+  /* Remove background image as we are using icon classes */
+}
+
+.hero .carousel-control-next-icon {
+  background-image: none;
+  /* Remove background image as we are using icon classes */
+}
+
+.hero .carousel-control-prev .bi-chevron-left,
+.hero .carousel-control-next .bi-chevron-right {
+  font-size: 24px;
+  /* Size of icons */
+  color: #fff;
+  /* Ensure icons are visible */
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    /* Adjust height for smaller screens */
+    padding-top: 50px;
+    /* Add space for controls */
+  }
+
+  .hero .video-section iframe {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    width: 100%;
+    /* Remove default border */
+  }
+
+  .hero .carousel-control-prev,
+  .hero .carousel-control-next {
+    width: 40px;
+    /* Smaller controls for mobile */
+    height: 40px;
+  }
+
+  .hero .carousel-control-prev .bi-chevron-left,
+  .hero .carousel-control-next .bi-chevron-right {
+    font-size: 20px;
+    /* Smaller icons for mobile */
+  }
+
+  .hero .text-section {
+    text-align: center;
+    /* Center align text for mobile */
+    padding: 20px;
+    /* Add padding for mobile */
+  }
+
+  .hero .text-section h2 {
+    font-size: 36px;
+    /* Smaller font size for mobile */
+  }
+
+  .hero .text-section p {
+    font-size: 16px;
+    /* Smaller font size for mobile */
+  }
+
+  .hero .text-section .btn-get-started {
+    font-size: 14px;
+    /* Smaller button text for mobile */
+    padding: 10px 30px;
+    /* Adjust button padding for mobile */
+  }
 }
 
 /*--------------------------------------------------------------
