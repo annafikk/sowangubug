@@ -906,6 +906,21 @@ section {
 /*--------------------------------------------------------------
 # Our Projects Section
 --------------------------------------------------------------*/
+.profil {
+  padding-bottom: 20px;
+}
+
+.container .profil h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.container .profil p {
+  text-align: justify;
+}
+
 .projects .portfolio-flters {
   padding: 0;
   margin: 0 auto 20px auto;
