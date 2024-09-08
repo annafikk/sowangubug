@@ -4,14 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
   <title>Beranda | sowangubug</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="https://res.cloudinary.com/annafikk/image/upload/logo-transparan_iwfsgp.png" rel="icon">
-  <link href="https://res.cloudinary.com/annafikk/image/upload/logo-transparan_iwfsgp.png" rel="apple-touch-icon">
+  <link href="" rel="icon">
+  <link href="" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,12 +33,10 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
+  <!-- Header -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- <img src="assets/img/logo/logo-transparan.png" alt=""> -->
         <h1>sowan<span>gubug</span></h1>
       </a>
 
@@ -59,7 +56,6 @@
               <li><a href="pages/profil-gubug.html#potensi-gubug">Potensi Gubug</a></li>
             </ul>
           </li>
-
           <li class="dropdown"><a href="pages/pemerintahan-gubug.html"><span>Pemerintahan Gubug</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -68,29 +64,30 @@
               <li><a href="pages/pemerintahan-gubug.html#lembaga-gubug">Lembaga Gubug</a></li>
             </ul>
           </li>
-
           <li class="dropdown"><a href="pages/informasi-publik.html"><span>Informasi Publik</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="pages/galeri.html">Galeri</a></li>
               <li><a href="pages/berita-terkini.html">Berita Terkini</a></li>
+              <li><a href="pages/usaha-umkm.html">Usaha & UMKM</a></li>
+              <li><a href="pages/mitigasi-bencana.html">Mitigasi Bencana</a></li>
               <li><a href="pages/contact.html">Kontak</a></li>
             </ul>
           </li>
         </ul>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
+  <!-- Hero Section -->
   <section id="hero" class="hero">
-    <!-- Carousel Background -->
+
+    <!-- Carousel Gambar -->
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-inner">
-        <div class="carousel-item active" style="background-image: url('https://res.cloudinary.com/annafikk/image/upload/background-1_w31r5k.jpg');"></div>
-        <div class="carousel-item" style="background-image: url('https://res.cloudinary.com/annafikk/image/upload/background-2_bzjmlu.jpg');"></div>
-        <!-- Add more carousel items if needed -->
+        <div class="carousel-item active" style="background-image: url('/assets/img/backgrounds/background-3.jpg');">
+        </div>
+        <div class="carousel-item" style="background-image: url('/assets/img/backgrounds/background-3.jpg');"></div>
       </div>
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -99,6 +96,44 @@
         <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
       </a>
     </div>
+
+    <!-- Carousel Video -->
+    <!-- <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <video class="d-block w-100" autoplay muted loop>
+            <source src="/assets/vid/drone-1.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="carousel-item">
+          <video class="d-block w-100" autoplay muted loop>
+            <source src="/assets/vid/drone-2.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="carousel-item">
+          <video class="d-block w-100" autoplay muted loop>
+            <source src="/assets/vid/drone-3.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="carousel-item">
+          <video class="d-block w-100" autoplay muted loop>
+            <source src="/assets/vid/drone-4.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div> -->
+
 
     <!-- Hero Content -->
     <div class="container">
@@ -109,19 +144,18 @@
         </div>
 
         <div class="col-lg-6 video-section">
-          <iframe width="640" height="390" src="https://www.youtube.com/embed/nBzmBQBVS6Q?si=UsDbKah6eiJ6xllP"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen></iframe>
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/nBzmBQBVS6Q?si=UsDbKah6eiJ6xllP" frameborder="0"
+              allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
-  </section><!-- End Hero Section -->
-
+  </section>
 
   <main id="main">
 
-    <!-- ======= Informasi Umum ======= -->
+    <!-- Informasi Umum -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -141,7 +175,7 @@
                 yang mudah untuk masyarakat Gubug.</p>
               <a href="pages/contact.html" class="readmore stretched-link"></a>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
@@ -154,7 +188,7 @@
                 memanfaatkan potensi tersebut.</p>
               <a href="pages/profil-gubug.html#potensi-gubug" class="readmore stretched-link"></a>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
@@ -166,7 +200,7 @@
                 usaha lokal merupakan prioritas kami untuk mendorong pertumbuhan ekonomi lokal.</p>
               <a href="pages/usaha-umkm.html" class="readmore stretched-link"></a>
             </div>
-          </div><!-- End Service Item -->
+          </div>
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
@@ -178,145 +212,142 @@
                 terhubung dengan informasi terkini yang relevan untuk masyarakat dan kegiatan sehari-hari.</p>
               <a href="pages/berita-terkini.html" class="readmore stretched-link"></a>
             </div>
-          </div><!-- End Service Item -->
+          </div>
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
 
-    <!-- ======= Features Section ======= -->
+    <!-- Konten Andalan -->
     <section id="features" class="features section-bg">
       <div class="container" data-aos="fade-up">
 
-        <ul class="nav nav-tabs row  g-2 d-flex">
+        <ul class="nav nav-tabs row g-2 d-flex">
 
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
               <h4>Pertanian</h4>
             </a>
-          </li><!-- End tab nav item -->
+          </li>
 
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-              <h4>Perkebunan</h4>
-            </a><!-- End tab nav item -->
+              <h4>Kebudayaan</h4>
+            </a>
+          </li>
 
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-              <h4>Kesenian</h4>
+              <h4>Pariwisata</h4>
             </a>
-          </li><!-- End tab nav item -->
+          </li>
 
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-              <h4>Kebudayaan</h4>
+              <h4>Komunitas</h4>
             </a>
-          </li><!-- End tab nav item -->
+          </li>
 
         </ul>
 
         <div class="tab-content">
 
+          <!-- Tab Pertanian -->
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
                 data-aos="fade-up" data-aos-delay="100">
-                <h3>Voluptatem dignissimos provident</h3>
+                <h3>Tulang Punggung Kehidupan Dusun</h3>
                 <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
+                  Pertanian adalah sumber utama mata pencaharian di dusun yang mendukung kehidupan sehari-hari dan
+                  ekonomi lokal masyarakat Gubug.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
-                    pariatur.</li>
+                  <li><i class="bi bi-check2-all"></i> Penerapan teknik pertanian berkelanjutan untuk menjaga
+                    kelestarian alam.</li>
+                  <li><i class="bi bi-check2-all"></i> Diversifikasi tanaman untuk meningkatkan pendapatan petani.</li>
+                  <li><i class="bi bi-check2-all"></i> Kolaborasi dalam komunitas pertanian untuk berbagi pengetahuan.
+                  </li>
                 </ul>
               </div>
               <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="assets/img/features-1.jpg" alt="" class="img-fluid">
+                <img src="assets/img/pertanian.jpg" alt="Pertanian di Desa" class="img-fluid">
               </div>
             </div>
-          </div><!-- End tab content item -->
+          </div>
 
+          <!-- Tab Kebudayaan -->
           <div class="tab-pane" id="tab-2">
             <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                <h3>Neque exercitationem debitis</h3>
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                data-aos="fade-up" data-aos-delay="100">
+                <h3>Warisan yang Dijaga dan Dilestarikan</h3>
                 <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
+                  Kebudayaan dusun adalah cerminan dari tradisi dan nilai-nilai yang diwariskan secara turun-temurun.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check2-all"></i> Provident mollitia neque rerum asperiores dolores quos qui a.
-                    Ipsum neque dolor voluptate nisi sed.</li>
-                  <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
-                    pariatur.</li>
+                  <li><i class="bi bi-check2-all"></i> Upacara adat dan tradisi yang memperkaya kehidupan dusun.</li>
+                  <li><i class="bi bi-check2-all"></i> Pelestarian bahasa dan seni tradisional sebagai identitas desa.
+                  </li>
+                  <li><i class="bi bi-check2-all"></i> Partisipasi warga dalam perayaan dan festival budaya lokal.</li>
                 </ul>
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-2.jpg" alt="" class="img-fluid">
+              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/kebudayaan.jpg" alt="Kebudayaan di Desa" class="img-fluid">
               </div>
             </div>
-          </div><!-- End tab content item -->
+          </div>
 
+          <!-- Tab Pariwisata -->
           <div class="tab-pane" id="tab-3">
             <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                <h3>Voluptatibus commodi accusamu</h3>
-                <ul>
-                  <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check2-all"></i> Provident mollitia neque rerum asperiores dolores quos qui a.
-                    Ipsum neque dolor voluptate nisi sed.</li>
-                </ul>
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                data-aos="fade-up" data-aos-delay="100">
+                <h3>Pesona Dusun yang Memikat</h3>
                 <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
+                  Pariwisata dusun menawarkan pengalaman autentik dan panorama alam yang memikat pengunjung.
                 </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> Interaksi langsung dengan warga dusun.</li>
+                  <li><i class="bi bi-check2-all"></i> Promosi produk lokal sebagai suvenir khas.
+                  </li>
+                </ul>
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-3.jpg" alt="" class="img-fluid">
+              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/pariwisata.jpg" alt="Pariwisata di Desa" class="img-fluid">
               </div>
             </div>
-          </div><!-- End tab content item -->
+          </div>
 
+          <!-- Tab Komunitas -->
           <div class="tab-pane" id="tab-4">
             <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                <h3>Omnis fugiat ea explicabo sunt</h3>
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center"
+                data-aos="fade-up" data-aos-delay="100">
+                <h3>Kehidupan Sosial yang Harmonis</h3>
                 <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                  dolore
-                  magna aliqua.
+                  Komunitas dusun dikenal dengan kebersamaan dan gotong royong yang kuat, menciptakan kehidupan sosial
+                  yang harmonis dan tenteram.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check2-all"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check2-all"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                    aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla
-                    pariatur.</li>
+                  <li><i class="bi bi-check2-all"></i> Kegiatan gotong royong dalam pembangunan dusun.</li>
+                  <li><i class="bi bi-check2-all"></i> Partisipasi dalam acara sosial dan keagamaan.</li>
+                  <li><i class="bi bi-check2-all"></i> Program pelatihan untuk meningkatkan kualitas hidup warga.</li>
                 </ul>
               </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/features-4.jpg" alt="" class="img-fluid">
+              <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/img/komunitas.jpg" alt="Komunitas di Desa" class="img-fluid">
               </div>
             </div>
-          </div><!-- End tab content item -->
+          </div>
 
         </div>
 
       </div>
-    </section><!-- End Features Section -->
+    </section>
 
-    <!-- ======= Our Projects Section ======= -->
+
+    <!-- Galeri Singkat -->
     <section id="galeri" class="projects">
       <div class="container" data-aos="fade-up">
 
@@ -335,7 +366,7 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Projects Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
             <div class="portfolio-content h-100">
@@ -346,7 +377,7 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Projects Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
             <div class="portfolio-content h-100">
@@ -357,7 +388,7 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Projects Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-design">
             <div class="portfolio-content h-100">
@@ -368,7 +399,7 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Projects Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
             <div class="portfolio-content h-100">
@@ -379,7 +410,7 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Projects Item -->
+          </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
             <div class="portfolio-content h-100">
@@ -390,19 +421,19 @@
                 </a>
               </div>
             </div>
-          </div><!-- End Projects Item -->
+          </div>
 
-        </div><!-- End Projects Container -->
+        </div>
 
         <div class="text-center my-4">
           <a href="pages/galeri.html" class="btn btn-lihat">Lihat Galeri Lainnya</a>
         </div>
 
       </div>
-    </section><!-- End Our Projects Section -->
+    </section>
 
 
-    <!-- ======= Recent Blog Posts Section ======= -->
+    <!-- Berita Terkini Singkat -->
     <section id="recent-blog-posts" class="recent-blog-posts">
       <div class="container" data-aos="fade-up">
 
@@ -444,7 +475,7 @@
               </div>
 
             </div>
-          </div><!-- End post item -->
+          </div>
 
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="post-item position-relative h-100">
@@ -476,7 +507,7 @@
               </div>
 
             </div>
-          </div><!-- End post item -->
+          </div>
 
           <div class="col-xl-4 col-md-6">
             <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="300">
@@ -508,7 +539,7 @@
               </div>
 
             </div>
-          </div><!-- End post item -->
+          </div>
 
         </div>
 
@@ -519,9 +550,8 @@
       </div>
     </section>
 
-  </main><!-- End #main -->
+  </main>
 
-  <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
     <div class="footer-content position-relative">
@@ -570,6 +600,8 @@
             <ul>
               <li><a href="pages/galeri.html">Galeri</a></li>
               <li><a href="pages/berita-terkini.html">Berita Terkini</a></li>
+              <li><a href="pages/usaha-umkm.html">Usaha & UMKM</a></li>
+              <li><a href="pages/mitigasi-bencana.html">Mitigasi Bencana</a></li>
               <li><a href="pages/contact.html">Kontak</a></li>
             </ul>
           </div><!-- End footer links column-->
@@ -584,13 +616,12 @@
           2024 &copy; <strong><span>sowangubug</span></strong>
         </div>
         <div class="credits">
-          Dibuat oleh <a href="pages/kknm-19016-uny.html">Tim KKNM-19016 UNY</a>
+          Dibuat oleh <a href="kknm-19016-uny.html">Tim KKNM-19016 UNY</a>
         </div>
       </div>
     </div>
 
   </footer>
-  <!-- End Footer -->
 
   <!-- Scroll To Top -->
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
