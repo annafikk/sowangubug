@@ -1,16 +1,27 @@
-/**
-* Template Name: UpConstruction
-* Updated: Aug 30 2023 with Bootstrap v5.3.1
-* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
-  /**
-   * Preloader
-   */
+  // Sweetalert Cookies
+  if (!localStorage.getItem('cookiesAccepted')) {
+    setTimeout(function () {
+      Swal.fire({
+        title: 'Kebijakan Cookies',
+        text: 'Kami menggunakan cookies untuk meningkatkan pengalaman Anda di situs kami. Dengan melanjutkan penggunaan situs kami, Anda menyetujui penggunaan cookies oleh kami.',
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Terima',
+        cancelButtonText: 'Tolak',
+      }).then((result) => {
+        if (result.isConfirmed) {
+          localStorage.setItem('cookiesAccepted', 'true');
+        } else {
+          localStorage.setItem('cookiesAccepted', 'false');
+        }
+      });
+    }, 3000);
+  }
+
+  // Preloader
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
@@ -18,15 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /**
-   * Mobile nav toggle
-   */
-
+  // Mobile Nav Toggle
   const mobileNavShow = document.querySelector('.mobile-nav-show');
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
 
   document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       event.preventDefault();
       mobileNavToogle();
     })
@@ -38,9 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileNavHide.classList.toggle('d-none');
   }
 
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
+  // Hide Mobile Nav on Same-Page/Hash Links
   document.querySelectorAll('#navbar a').forEach(navbarlink => {
 
     if (!navbarlink.hash) return;
@@ -56,13 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
+  // Toggle Movile Nav Dropdowns
   const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
 
   navDropdowns.forEach(el => {
-    el.addEventListener('click', function(event) {
+    el.addEventListener('click', function (event) {
       if (document.querySelector('.mobile-nav-active')) {
         event.preventDefault();
         this.classList.toggle('active');
@@ -75,12 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   });
 
-  /**
-   * Scroll top button
-   */
+  // Scroll to Top Button
   const scrollTop = document.querySelector('.scroll-top');
   if (scrollTop) {
-    const togglescrollTop = function() {
+    const togglescrollTop = function () {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
     window.addEventListener('load', togglescrollTop);
@@ -91,16 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   }
 
-  /**
-   * Initiate glightbox
-   */
+  // Initiate Glightbox
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
-  /**
-   * Porfolio isotope and filter
-   */
+  // Portfolio Isotope and Filter
   let portfolionIsotope = document.querySelector('.portfolio-isotope');
 
   if (portfolionIsotope) {
@@ -118,8 +116,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       let menuFilters = document.querySelectorAll('.portfolio-isotope .portfolio-flters li');
-      menuFilters.forEach(function(el) {
-        el.addEventListener('click', function() {
+      menuFilters.forEach(function (el) {
+        el.addEventListener('click', function () {
           document.querySelector('.portfolio-isotope .portfolio-flters .filter-active').classList.remove('filter-active');
           this.classList.add('filter-active');
           portfolioIsotope.arrange({
@@ -135,9 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
 
-  /**
-   * Init swiper slider with 1 slide at once in desktop view
-   */
+  // Init Swiper Slider With 1 Slide at Once in Desktop View
   new Swiper('.slides-1', {
     speed: 600,
     loop: true,
@@ -157,9 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /**
-   * Init swiper slider with 2 slides at once in desktop view
-   */
+  // Init Swiper Slider With 2 Slides at Once in Desktop View
   new Swiper('.slides-2', {
     speed: 600,
     loop: true,
@@ -190,14 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /**
-   * Initiate pURE cOUNTER
-   */
+  // Initiate Pure Counter
   new PureCounter();
 
-  /**
-   * Animation on scroll function and init
-   */
+  // Animation on Scroll Function and Init
   function aos_init() {
     AOS.init({
       duration: 800,

@@ -182,13 +182,21 @@ section {
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
+/* Kelas untuk latar belakang universal */
+.background-image {
+  background-image: url("https://res.cloudinary.com/annafikk/image/upload/v1726065852/11-9-24-ngingas_pdivpe.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Gaya untuk elemen breadcrumbs */
 .breadcrumbs {
   padding: 140px 0 60px 0;
   min-height: 30vh;
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  color: #fff;
+  /* Untuk memastikan teks tetap kontras */
 }
 
 .breadcrumbs:before {
@@ -517,6 +525,50 @@ section {
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    white-space: nowrap;
+    text-transform: uppercase;
+    transition: 0.3s;
+  }
+
+  .navbar a i,
+  .navbar a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+  }
+
+  .navbar a:hover,
+  .navbar .active,
+  .navbar .active:focus,
+  .navbar li:hover>a {
+    color: #fff;
+  }
+
+  .navbar .dropdown ul,
+  .navbar .dropdown .dropdown ul {
+    position: static;
+    display: none;
+    padding: 10px 0;
+    margin: 10px 20px;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid #222428;
+  }
+
+  .navbar .dropdown>.dropdown-active,
+  .navbar .dropdown .dropdown>.dropdown-active {
+    display: block;
   }
 
   .mobile-nav-show {
@@ -951,9 +1003,17 @@ section {
 .projects .portfolio-content {
   position: relative;
   overflow: hidden;
+  /* Menetapkan ukuran gambar yang konsisten */
+  width: 100%;
+  height: 250px;
+  /* Atur tinggi yang sesuai untuk gambar Anda */
 }
 
 .projects .portfolio-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Menjaga proporsi gambar dan mengisi elemen dengan baik */
   transition: 0.3s;
 }
 
@@ -1659,6 +1719,7 @@ section {
 
 .service-details p {
   font-size: 15px;
+  text-align: justify;
 }
 
 .service-details ul {
@@ -2235,6 +2296,10 @@ section {
   font-weight: bold;
 }
 
+.blog .blog-details .content p {
+  text-align: justify;
+}
+
 .blog .blog-details .content blockquote {
   overflow: hidden;
   background-color: rgba(82, 86, 94, 0.06);
@@ -2478,6 +2543,42 @@ section {
   font-size: 14px;
 }
 
+.blog-pagination {
+  margin-top: 30px;
+  color: #838893;
+}
+
+.blog-pagination ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.blog-pagination li {
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.blog-pagination li a {
+  color: var(--warna-kedua);
+  padding: 7px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-pagination li.active,
+.blog-pagination li:hover {
+  background: var(--warna-pertama);
+  color: #fff;
+}
+
+.blog-pagination li.active a,
+.blog-pagination li:hover a {
+  color: var(--color-white);
+}
+
 .blog .sidebar .recent-posts .post-item {
   display: flex;
 }
@@ -2664,7 +2765,7 @@ section {
 --------------------------------------------------------------*/
 .footer {
   color: #fff;
-  background: url("../img/footer-bg.jpg") top center no-repeat;
+  background: url("https://res.cloudinary.com/annafikk/image/upload/v1726065852/11-9-24-ngingas_pdivpe.jpg") top center no-repeat;
   background-size: cover;
   font-size: 14px;
   padding: 80px 0 60px 0;
@@ -2774,4 +2875,35 @@ section {
 
 .footer .footer-legal .credits a {
   color: var(--warna-pertama);
+}
+
+/* Sweetalert2 */
+.swal2-popup {
+  font-size: 1rem;
+  max-width: 50vw;
+  padding: 1rem;
+}
+
+.swal2-title {
+  font-size: 1.5rem;
+  word-break: break-word;
+}
+
+.swal2-content {
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .swal2-popup {
+    font-size: 0.9rem;
+  }
+
+  .swal2-title {
+    font-size: 1.2rem;
+  }
+
+  .swal2-content {
+    font-size: 0.9rem;
+  }
 }

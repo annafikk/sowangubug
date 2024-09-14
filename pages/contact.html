@@ -72,7 +72,7 @@
           <li class="dropdown"><a href="informasi-publik.html" class="active"><span>Informasi Publik</span> <i
                 class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="galeri.html">Galeri</a></li>
+              <li><a href="galeri-1.html">Galeri</a></li>
               <li><a href="berita-terkini.html">Berita Terkini</a></li>
               <li><a href="usaha-umkm.html">Usaha & UMKM</a></li>
               <li><a href="contact.html">Kontak</a></li>
@@ -86,19 +86,16 @@
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center"
-      style="background-image: url('../assets/img/breadcrumbs-bg.jpg');">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs background-image">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
-
         <h2>Kontak</h2>
         <ol>
           <li><a href="../index.html">Beranda</a></li>
           <li>Kontak</li>
         </ol>
-
       </div>
-    </div><!-- End Breadcrumbs -->
+    </div>
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -106,27 +103,31 @@
 
         <div class="row gy-4">
           <div class="col-lg-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+            <a target="_blank"
+              href="https://maps.app.goo.gl/Axp8pX4YADU3oeem6"
+              class="info-item d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-map"></i>
               <h3>Lokasi Kami</h3>
               <p>Padukuhan Argosari, Sedayu, Bantul, Yogyakarta</p>
-            </div>
+            </a>
           </div><!-- End Info Item -->
 
           <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+            <a target="_blank" href="mailto:sowangubug@gmail.com"
+              class="info-item d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-envelope"></i>
               <h3>Email</h3>
               <p>sowangubug@gmail.com</p>
-            </div>
+            </a>
           </div><!-- End Info Item -->
 
           <div class="col-lg-3 col-md-6">
-            <div class="info-item  d-flex flex-column justify-content-center align-items-center">
+            <a target="_blank" href="https://wa.me/6285729899891"
+              class="info-item d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-telephone"></i>
               <h3>Telepon</h3>
               <p>+62-857-2989-9891</p>
-            </div>
+            </a>
           </div><!-- End Info Item -->
 
         </div>
@@ -142,29 +143,30 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row gy-4">
-                <div class="col-lg-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Nama" required>
+            <form method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" class="form-control" id="name" required placeholder="Nama" />
                 </div>
-                <div class="col-lg-6 form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" id="email" required placeholder="Email" />
+                </div>
+
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" id="subject" required placeholder="Subjek" />
+                </div>
+
+                <div class="form-group mt-3">
+                  <textarea class="form-control" id="message" rows="6" required placeholder="Pesan"></textarea>
+                </div>
+
+                <div class="text-center">
+                  <button class="btn btn-primary" type="submit" onclick="sendMail()">Kirim Pesan</button>
                 </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Pesan" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Mohon Tunggu</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Pesan berhasil terkirim. Terima Kasih!</div>
-              </div>
-              <div class="text-center"><button type="submit">Kirim Pesan</button></div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
 
         </div>
 
@@ -176,76 +178,76 @@
   <footer id="footer" class="footer">
 
     <div class="footer-content position-relative">
-        <div class="container">
-            <div class="row">
+      <div class="container">
+        <div class="row">
 
-                <div class="col-lg-6 col-md-6">
-                    <div class="footer-info">
-                        <h3>sowangubug</h3>
-                        <p>
-                            Padukuhan Gubug, Argosari, Sedayu, Bantul<br>
-                            Daerah Istimewa Yogyakarta<br><br>
-                            <strong>Telepon</strong> [ <a href="https://wa.me/+6285729899891">+62-857-2989-9891</a>
-                            ] <br>
-                            <strong>Email</strong> [ <a href="">sowangubug@gmail.com</a> ] <br>
-                        </p>
-                        <div class="social-links d-flex mt-3">
-                            <a href="#" class="d-flex align-items-center justify-content-center"><i
-                                    class="bi bi-instagram"></i></a>
-                            <a href="#" class="d-flex align-items-center justify-content-center"><i
-                                    class="bi bi-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div><!-- End footer info column-->
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Profil <span>Gubug</span></h4>
-                    <ul>
-                        <li><a href="profil-gubug.html#tentang-gubug">Tentang Gubug</a></li>
-                        <li><a href="profil-gubug.html#visi-misi">Visi & Misi</a></li>
-                        <li><a href="profil-gubug.html#sejarah-gubug">Sejarah Gubug</a></li>
-                        <li><a href="profil-gubug.html#geografis-gubug">Geografis Gubug</a></li>
-                        <li><a href="profil-gubug.html#demografi-gubug">Demografi Gubug</a></li>
-                        <li><a href="profil-gubug.html#potensi-gubug">Potensi Gubug</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Pemerintahan <span>Gubug</span></h4>
-                    <ul>
-                        <li><a href="pemerintahan-gubug.html#struktur-gubug">Struktur Gubug</a></li>
-                        <li><a href="pemerintahan-gubug.html#perangkat-gubug">Perangkat Gubug</a></li>
-                        <li><a href="pemerintahan-gubug.html#lembaga-gubug">Lembaga Gubug</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-
-                <div class="col-lg-2 col-md-3 footer-links">
-                    <h4>Informasi <span>Publik</span></h4>
-                    <ul>
-                        <li><a href="galeri.html">Galeri</a></li>
-                        <li><a href="berita-terkini.html">Berita Terkini</a></li>
-                        <li><a href="usaha-umkm.html">Usaha & UMKM</a></li>
-                        <li><a href="mitigasi-bencana.html">Mitigasi Bencana</a></li>
-                        <li><a href="contact.html">Kontak</a></li>
-                    </ul>
-                </div><!-- End footer links column-->
-
+          <div class="col-lg-6 col-md-6">
+            <div class="footer-info">
+              <h3>sowangubug</h3>
+              <p>
+                Padukuhan Gubug, Argosari, Sedayu, Bantul<br>
+                Daerah Istimewa Yogyakarta<br><br>
+                <strong>Telepon</strong> [ <a href="https://wa.me/+6285729899891">+62-857-2989-9891</a>
+                ] <br>
+                <strong>Email</strong> [ <a href="">sowangubug@gmail.com</a> ] <br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a target="_blank" href="https://www.instagram.com/sabanesiasolution"
+                  class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a target="_blank" href="http://tiktok.com/@sabanesiasolution"
+                  class="d-flex align-items-center justify-content-center"><i class="bi bi-tiktok"></i></a>
+              </div>
             </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Profil <span>Gubug</span></h4>
+            <ul>
+              <li><a href="profil-gubug.html#tentang-gubug">Tentang Gubug</a></li>
+              <li><a href="profil-gubug.html#visi-misi">Visi & Misi</a></li>
+              <li><a href="profil-gubug.html#sejarah-gubug">Sejarah Gubug</a></li>
+              <li><a href="profil-gubug.html#geografis-gubug">Geografis Gubug</a></li>
+              <li><a href="profil-gubug.html#demografi-gubug">Demografi Gubug</a></li>
+              <li><a href="profil-gubug.html#potensi-gubug">Potensi Gubug</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Pemerintahan <span>Gubug</span></h4>
+            <ul>
+              <li><a href="pemerintahan-gubug.html#struktur-gubug">Struktur Gubug</a></li>
+              <li><a href="pemerintahan-gubug.html#perangkat-gubug">Perangkat Gubug</a></li>
+              <li><a href="pemerintahan-gubug.html#lembaga-gubug">Lembaga Gubug</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Informasi <span>Publik</span></h4>
+            <ul>
+              <li><a href="galeri-1.html">Galeri</a></li>
+              <li><a href="berita-terkini.html">Berita Terkini</a></li>
+              <li><a href="usaha-umkm.html">Usaha & UMKM</a></li>
+              <li><a href="mitigasi-bencana.html">Mitigasi Bencana</a></li>
+              <li><a href="contact.html">Kontak</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
         </div>
+      </div>
     </div>
 
     <div class="footer-legal text-center position-relative">
-        <div class="container">
-            <div class="copyright">
-                2024 &copy; <strong><span>sowangubug</span></strong>
-            </div>
-            <div class="credits">
-                Dibuat oleh <a href="kknm-19016-uny.html">Tim KKNM-19016 UNY</a>
-            </div>
+      <div class="container">
+        <div class="copyright">
+          2024 &copy; <strong><span>sowangubug</span></strong>
         </div>
+        <div class="credits">
+          Dibuat oleh <a href="kknm-19016-uny.html">Tim KKNM-19016 UNY</a>
+        </div>
+      </div>
     </div>
 
-</footer>
+  </footer>
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
@@ -262,7 +264,18 @@
   <script src="../assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../assets/js/email.js"></script>
   <script src="../assets/js/main.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "-PvAlEAjlRxAC9m_Z",
+      });
+    })();
+  </script>
 
 </body>
 
