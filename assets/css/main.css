@@ -143,60 +143,50 @@ section {
 .section-header p {
   margin: 0 auto;
   padding: 0 15px;
-  /* Added padding for mobile view */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   section {
     padding: 40px 0;
-    /* Reduce padding for smaller screens */
   }
 
   .section-header h2 {
     font-size: 28px;
-    /* Slightly smaller font size for mobile */
   }
 
   .section-header h2:before,
   .section-header h2:after {
     width: 30px;
-    /* Adjust width for mobile view */
   }
 
   .section-header p {
     padding: 0 10px;
-    /* Reduce padding for mobile view */
     max-width: 90%;
-    /* Ensure paragraph does not exceed screen width */
   }
 }
 
 @media (min-width: 1199px) {
   .section-header p {
     max-width: 60%;
-    /* Apply to larger screens */
   }
 }
 
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
-/* Kelas untuk latar belakang universal */
 .background-image {
-  background-image: url("https://res.cloudinary.com/annafikk/image/upload/v1726065852/11-9-24-ngingas_pdivpe.jpg");
+  background-image: url("https://res.cloudinary.com/annafikk/image/upload/t_21-7-24-olahraga-voli-1-crp/v1725896782/11-8-24-jalan-sehat-rt-50-8_ymeim8_e78bcz.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Gaya untuk elemen breadcrumbs */
 .breadcrumbs {
   padding: 140px 0 60px 0;
   min-height: 30vh;
   position: relative;
   color: #fff;
-  /* Untuk memastikan teks tetap kontras */
 }
 
 .breadcrumbs:before {
@@ -242,6 +232,62 @@ section {
   padding-right: 10px;
   color: #fff;
   content: "/";
+}
+
+@media only screen and (max-width: 768px) {
+  .breadcrumbs {
+    padding: 120px 0 40px 0;
+    min-height: 25vh;
+  }
+
+  .breadcrumbs h2 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .breadcrumbs ol {
+    font-size: 14px;
+  }
+
+  .breadcrumbs ol a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .breadcrumbs ol li+li {
+    padding-left: 5px;
+  }
+
+  .breadcrumbs ol li+li::before {
+    padding-right: 5px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .breadcrumbs {
+    padding: 120px 0 40px 0;
+    min-height: 20vh;
+  }
+
+  .breadcrumbs h2 {
+    font-size: 30px;
+    line-height: 1.1;
+  }
+
+  .breadcrumbs ol {
+    font-size: 12px;
+  }
+
+  .breadcrumbs ol a {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .breadcrumbs ol li+li {
+    padding-left: 3px;
+  }
+
+  .breadcrumbs ol li+li::before {
+    padding-right: 3px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -325,7 +371,6 @@ section {
 # Header
 --------------------------------------------------------------*/
 .header {
-  /* position: absolute; */
   background-color: #ffffff;
   z-index: 997;
   padding: 20px 0;
@@ -335,8 +380,15 @@ section {
 }
 
 .header .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+  max-height: 35px;
+  margin-right: 1rem;
+  width: auto;
+  height: auto;
+}
+
+.header .logo img {
+  max-height: 35px;
+  margin-right: 1rem;
 }
 
 .header .logo h1 {
@@ -344,11 +396,31 @@ section {
   font-weight: 700;
   color: var(--warna-teks-pertama);
   margin-bottom: 0;
-  font-family: var(--warna-teks-pertama);
+  font-family: var(--font-primary);
 }
 
 .header .logo h1 span {
   color: var(--warna-teks-kedua);
+}
+
+@media only screen and (max-width: 768px) {
+  .header .logo img {
+    max-height: 30px;
+  }
+
+  .header .logo h1 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header .logo img {
+    max-height: 25px;
+  }
+
+  .header .logo h1 {
+    font-size: 18px;
+  }
 }
 
 /*--------------------------------------------------------------
