@@ -117,6 +117,18 @@ section {
   scroll-margin-top: 130px;
 }
 
+.section-header img {
+  display: block;
+  /* Gambar sebagai elemen blok */
+  margin: 0 auto;
+  /* Pusatkan gambar */
+  max-width: 150px;
+  /* Atur lebar maksimum sesuai kebutuhan */
+  height: auto;
+  /* Agar proporsi tetap terjaga */
+  padding-bottom: 20px;
+}
+
 
 .section-header h2 {
   font-size: 32px;
@@ -228,8 +240,10 @@ section {
 }
 
 .breadcrumbs ol a:hover {
-  text-decoration: underline;
+  color: var(--warna-pertama);
+  text-decoration: none;
 }
+
 
 .breadcrumbs ol li+li {
   padding-left: 10px;
@@ -1039,6 +1053,7 @@ section {
 
 .container .profil p {
   text-align: justify;
+  text-indent: 3rem;
 }
 
 .projects .portfolio-flters {
@@ -1360,6 +1375,11 @@ section {
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about {
+  position: relative;
+  /* Ensure the section has relative positioning */
+}
+
 .about h2 {
   font-size: 48px;
   font-weight: 700;
@@ -1377,11 +1397,35 @@ section {
 .about .our-story {
   padding: 40px;
   background-color: #f5f6f7;
+  flex: 1;
+  text-align: justify;
+  /* Allow the text to take available space */
 }
 
-@media (min-width: 991px) {
-  .about .our-story {
-    padding-right: 35%;
+.about .about-img {
+  min-height: 300px;
+  /* Set a height for the image */
+  height: auto;
+  /* Adjust based on content */
+  width: calc(100% - 20px);
+  /* Full width minus padding */
+  background-size: contain;
+  /* Maintain aspect ratio without cropping */
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Prevent image repetition */
+  flex: 1;
+  /* Allow the image to take available space */
+  margin: 10px;
+  /* Add uniform margin */
+}
+
+
+@media (min-width: 768px) {
+  .about .about-img {
+    margin: 2px 2px;
+    /* Smaller top and bottom margin */
   }
 }
 
@@ -1435,20 +1479,6 @@ section {
 
 .about .watch-video:hover a {
   color: var(--warna-pertama);
-}
-
-.about .about-img {
-  min-height: 600px;
-  background-size: cover;
-  background-position: center;
-}
-
-@media (min-width: 992px) {
-  .about .about-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -2574,13 +2604,13 @@ section {
 .blog .post-author h4 {
   font-weight: 600;
   font-size: 22px;
-  margin-bottom: 0px;
+  margin-bottom: 8px;
   padding: 0;
   color: var(--warna-kedua);
 }
 
 .blog .post-author .social-links {
-  margin: 0 10px 10px 0;
+  margin: 0 15px 10px 0;
 }
 
 .blog .post-author .social-links a {
@@ -3116,5 +3146,25 @@ section {
   .swal2-content {
     font-size: 0.9rem;
     /* Ukuran konten untuk mobile */
+  }
+}
+
+/* CTA */
+.call-action-btn {
+  display: flex;
+  justify-content: center;
+  /* Memastikan tombol di tengah */
+  align-items: center;
+  height: 100%;
+  /* Pastikan elemen ini mengambil tinggi penuh kolom */
+}
+
+/* Tambahkan media query untuk desktop */
+@media (min-width: 768px) {
+
+  /* Sesuaikan dengan breakpoint yang Anda gunakan */
+  .call-action-btn {
+    justify-content: center;
+    /* Tetap di tengah untuk desktop */
   }
 }
