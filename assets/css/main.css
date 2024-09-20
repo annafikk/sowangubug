@@ -114,7 +114,9 @@ section {
 .section-header {
   text-align: center;
   padding-bottom: 30px;
+  scroll-margin-top: 130px;
 }
+
 
 .section-header h2 {
   font-size: 32px;
@@ -149,6 +151,12 @@ section {
 @media (max-width: 768px) {
   section {
     padding: 40px 0;
+  }
+
+  .section-header {
+    text-align: center;
+    padding-bottom: 30px;
+    scroll-margin-top: 100px;
   }
 
   .section-header h2 {
@@ -1582,6 +1590,18 @@ section {
 /*--------------------------------------------------------------
 # Projet Details Section
 --------------------------------------------------------------*/
+.project-details .section-header img {
+  width: 50rem;
+  /* Adjust this value as needed */
+  height: auto;
+  /* Maintains aspect ratio */
+  max-width: 100%;
+  /* Ensures the image doesn’t exceed its container */
+  margin-top: 10px;
+  /* Adds some spacing above the image */
+}
+
+
 .project-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -2028,6 +2048,34 @@ section {
   /* Ensure hero section takes full viewport height */
 }
 
+.hero .video-section {
+  margin: 0;
+  padding: 0;
+}
+
+.hero .row {
+  margin: 0;
+  /* Pastikan tidak ada margin yang berlebihan */
+}
+
+.hero .carousel-item {
+  margin: 0;
+  /* Pastikan tidak ada margin pada item carousel */
+}
+
+.hero .carousel-item video {
+  object-fit: cover;
+  /* Menjaga aspek rasio video */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* Mengatur posisi video */
+  top: 0;
+  /* Menjaga video di bagian atas */
+  left: 0;
+  /* Menjaga video di bagian kiri */
+}
+
 .hero .carousel {
   position: absolute;
   inset: 0;
@@ -2055,9 +2103,13 @@ section {
 .hero .carousel-item::before {
   content: "";
   background-color: rgba(0, 0, 0, 0.7);
+  /* Mengatur kegelapan overlay */
   position: absolute;
   inset: 0;
+  z-index: 1;
+  /* Pastikan overlay di atas video */
 }
+
 
 .hero .container {
   position: relative;
@@ -2140,8 +2192,6 @@ section {
 
 .hero .carousel-control-prev-icon,
 .hero .carousel-control-next-icon {
-  /* background-color: rgba(0, 0, 0, 0.5); */
-  /* Background color for better visibility */
   border-radius: 50%;
   background-size: 50% 50%;
   background-repeat: no-repeat;
@@ -2168,17 +2218,32 @@ section {
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .hero {
-    height: auto;
-    /* Adjust height for smaller screens */
-    padding-top: 50px;
-    /* Add space for controls */
+    height: 100vh;
+    /* Pastikan tinggi hero section penuh */
+    overflow: hidden;
+    /* Menghindari elemen lain muncul di bawah */
+    padding-top: 80px;
+    /* Tambahkan padding atas untuk memberi ruang */
+  }
+
+  .hero .row {
+    min-height: 10vh;
+    position: relative;
+    /* Ensure row doesn't interfere with carousel controls */
+    z-index: 2;
+    /* Ensure hero content is above carousel */
+  }
+
+  .hero .video-section {
+    margin-top: 15px;
   }
 
   .hero .video-section iframe {
     aspect-ratio: 16 / 9;
-    height: auto;
+    height: 100%;
+    /* Ensure iframe takes full height */
     width: 100%;
-    /* Remove default border */
+    /* Ensure iframe takes full width */
   }
 
   .hero .carousel-control-prev,
@@ -2218,6 +2283,7 @@ section {
     /* Adjust button padding for mobile */
   }
 }
+
 
 /*--------------------------------------------------------------
 # Blog
@@ -2949,33 +3015,106 @@ section {
   color: var(--warna-pertama);
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding: 80px 20px 60px 20px;
+    /* Menambahkan padding kiri dan kanan */
+    text-align: center;
+    /* Mengatur teks di tengah */
+  }
+
+  .footer .footer-content {
+    margin-left: 0;
+    /* Menghapus margin kiri */
+    margin-right: 0;
+    /* Menghapus margin kanan */
+  }
+
+  .footer-links {
+    display: none;
+    /* Menyembunyikan footer links di mobile */
+  }
+
+  .social-links {
+    display: flex;
+    /* Pastikan ini diatur */
+    justify-content: center;
+    /* Pusatkan secara horizontal */
+    margin-top: 1rem;
+    /* Jarak atas */
+  }
+
+  .social-links a {
+    margin: 0 10px;
+    /* Jarak antar ikon */
+    color: #fff;
+    /* Warna ikon */
+    text-decoration: none;
+    /* Hapus garis bawah */
+  }
+
+  .social-links a:hover {
+    color: var(--warna-pertama);
+    /* Ganti warna saat hover */
+  }
+
+}
+
 /* Sweetalert2 */
 .swal2-popup {
   font-size: 1rem;
+  /* Ukuran font default */
   max-width: 50vw;
+  /* Lebar maksimum */
   padding: 1rem;
+  /* Padding untuk seluruh popup */
+  border-radius: 10px;
+  /* Sudut yang lebih halus */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  /* Efek bayangan */
+  background-color: #fff;
+  /* Warna latar belakang */
 }
 
 .swal2-title {
   font-size: 1.5rem;
+  /* Ukuran font judul */
   word-break: break-word;
+  /* Memastikan kata tidak terputus */
+  margin-bottom: 0.5rem;
+  /* Ruang di bawah judul */
+  color: #333;
+  /* Warna teks */
 }
 
 .swal2-content {
   font-size: 1rem;
+  /* Ukuran font konten */
   word-break: break-word;
+  /* Memastikan kata tidak terputus */
+  color: #555;
+  /* Warna teks */
 }
 
 @media (max-width: 600px) {
   .swal2-popup {
     font-size: 0.9rem;
+    /* Ukuran font untuk mobile */
+    padding: 0.8rem;
+    /* Mengurangi padding di mobile */
+    max-width: 90vw;
+    /* Lebar maksimum lebih besar di mobile */
   }
 
   .swal2-title {
     font-size: 1.2rem;
+    /* Ukuran judul untuk mobile */
+    margin-bottom: 0.3rem;
+    /* Mengurangi ruang di bawah judul */
   }
 
   .swal2-content {
     font-size: 0.9rem;
+    /* Ukuran konten untuk mobile */
   }
 }
