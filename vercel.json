@@ -1,3 +1,10 @@
 {
-    "cleanUrls": true
+    "cleanUrls": true,
+    "redirects": [
+        {
+            "source": "/pages/(.*)",
+            "destination": "/$1",
+            "permanent": true
+        }
+    ]
 }
