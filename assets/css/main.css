@@ -307,7 +307,7 @@ section {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 99999;
+  z-index: 9997;
   background: var(--warna-pertama);
   width: 40px;
   height: 40px;
