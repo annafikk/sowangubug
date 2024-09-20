@@ -1,10 +1,13 @@
 {
     "cleanUrls": true,
-    "redirects": [
+    "rewrites": [
         {
             "source": "/pages/(.*)",
-            "destination": "/$1",
-            "permanent": true
+            "destination": "/$1"
+        },
+        {
+            "source": "/",
+            "destination": "/index.html"
         }
     ]
 }
