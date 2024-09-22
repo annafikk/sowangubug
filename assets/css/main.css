@@ -5,7 +5,7 @@
   --font-secondary: "Work Sans", sans-serif;
 }
 
-/* Colors */
+/* Warna */
 :root {
   --warna-default: #364d59;
   --warna-pertama: #ffbb00;
@@ -14,14 +14,12 @@
   --warna-teks-kedua: #4B7E56;
 }
 
-/* Smooth scroll behavior */
+/* Smooth Scroll Behaviour */
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+/* Umum */
 body {
   font-family: var(--font-default);
   color: var(--color-default);
@@ -99,9 +97,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Sections & Section Header
---------------------------------------------------------------*/
+/* Section & Section Header */
 section {
   padding: 40px 0;
   overflow: hidden;
@@ -119,16 +115,11 @@ section {
 
 .section-header img {
   display: block;
-  /* Gambar sebagai elemen blok */
   margin: 0 auto;
-  /* Pusatkan gambar */
   max-width: 150px;
-  /* Atur lebar maksimum sesuai kebutuhan */
   height: auto;
-  /* Agar proporsi tetap terjaga */
   padding-bottom: 20px;
 }
-
 
 .section-header h2 {
   font-size: 32px;
@@ -192,11 +183,9 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
+/* Breadcrumbs */
 .background-image {
-  background-image: url("https://res.cloudinary.com/annafikk/image/upload/t_21-7-24-olahraga-voli-1-crp/v1725896782/11-8-24-jalan-sehat-rt-50-8_ymeim8_e78bcz.jpg");
+  background-image: url("/assets/img/header.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -312,16 +301,14 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Scroll top button
---------------------------------------------------------------*/
+/* Scroll Top Button */
 .scroll-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 9997;
+  z-index: 99;
   background: var(--warna-pertama);
   width: 40px;
   height: 40px;
@@ -345,9 +332,7 @@ section {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
+/* Preloader */
 #preloader {
   position: fixed;
   inset: 0;
@@ -380,18 +365,14 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
+/* Disable AOS Animation Delay on Mobile Devices */
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/* Header */
 .header {
   background-color: #ffffff;
   z-index: 997;
@@ -408,11 +389,6 @@ section {
   height: auto;
 }
 
-.header .logo img {
-  max-height: 35px;
-  margin-right: 1rem;
-}
-
 .header .logo h1 {
   font-size: 24px;
   font-weight: 700;
@@ -425,19 +401,10 @@ section {
   color: var(--warna-teks-kedua);
 }
 
-@media only screen and (max-width: 768px) {
-  .header .logo img {
-    max-height: 30px;
-  }
-
-  .header .logo h1 {
-    font-size: 20px;
-  }
-}
-
 @media only screen and (max-width: 480px) {
   .header .logo img {
     max-height: 25px;
+    margin-right: 0.4rem;
   }
 
   .header .logo h1 {
@@ -445,9 +412,7 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Desktop Navigation
---------------------------------------------------------------*/
+/* Navigasi Desktop */
 @media (min-width: 1280px) {
   .navbar {
     padding: 0;
@@ -595,9 +560,7 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Mobile Navigation
---------------------------------------------------------------*/
+/* Navigasi Mobile */
 @media (max-width: 1279px) {
   .navbar {
     position: fixed;
@@ -705,9 +668,7 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Get Started Section
---------------------------------------------------------------*/
+/* Get Started */
 .get-started .content {
   padding: 30px 0;
 }
@@ -844,9 +805,7 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Constructions Section
---------------------------------------------------------------*/
+/* Constructions */
 .constructions .card-item {
   border: 1px solid rgba(82, 86, 94, 0.2);
   background: #fff;
@@ -877,9 +836,7 @@ section {
   margin: 0;
 }
 
-/*--------------------------------------------------------------
-# Services Section
---------------------------------------------------------------*/
+/* Services */
 .services .service-item {
   padding: 40px;
   background: #fff;
@@ -947,9 +904,7 @@ section {
   border-color: var(--warna-pertama);
 }
 
-/*--------------------------------------------------------------
-# Features Section
---------------------------------------------------------------*/
+/* Features */
 .features .nav-tabs {
   border: 0;
 }
@@ -1037,9 +992,7 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Our Projects Section
---------------------------------------------------------------*/
+/* Our Projects */
 .profil {
   padding-bottom: 20px;
 }
@@ -1098,17 +1051,14 @@ section {
 .projects .portfolio-content {
   position: relative;
   overflow: hidden;
-  /* Menetapkan ukuran gambar yang konsisten */
   width: 100%;
   height: 250px;
-  /* Atur tinggi yang sesuai untuk gambar Anda */
 }
 
 .projects .portfolio-content img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Menjaga proporsi gambar dan mengisi elemen dengan baik */
   transition: 0.3s;
 }
 
@@ -1182,9 +1132,7 @@ section {
   margin-bottom: 1.5rem;
 }
 
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
+/* Testimonials */
 .testimonials .testimonial-wrap {
   padding-left: 50px;
 }
@@ -1297,9 +1245,7 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Alt Services Section
---------------------------------------------------------------*/
+/* Alt Services */
 .alt-services .img-bg {
   background-size: cover;
   background-position: center center;
@@ -1372,12 +1318,9 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
+/* About */
 .about {
   position: relative;
-  /* Ensure the section has relative positioning */
 }
 
 .about h2 {
@@ -1399,33 +1342,23 @@ section {
   background-color: #f5f6f7;
   flex: 1;
   text-align: justify;
-  /* Allow the text to take available space */
 }
 
 .about .about-img {
   min-height: 300px;
-  /* Set a height for the image */
   height: auto;
-  /* Adjust based on content */
   width: calc(100% - 20px);
-  /* Full width minus padding */
   background-size: contain;
-  /* Maintain aspect ratio without cropping */
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Prevent image repetition */
   flex: 1;
-  /* Allow the image to take available space */
   margin: 10px;
-  /* Add uniform margin */
 }
 
 
 @media (min-width: 768px) {
   .about .about-img {
     margin: 2px 2px;
-    /* Smaller top and bottom margin */
   }
 }
 
@@ -1481,9 +1414,7 @@ section {
   color: var(--warna-pertama);
 }
 
-/*--------------------------------------------------------------
-# Stats Counter Section
---------------------------------------------------------------*/
+/* Stats Counter */
 .stats-counter .stats-item {
   background: #fff;
   box-shadow: 0px 0 30px rgba(82, 86, 94, 0.05);
@@ -1511,18 +1442,30 @@ section {
   font-size: 14px;
 }
 
-/*--------------------------------------------------------------
-# Our Team Section
---------------------------------------------------------------*/
+/* Our Team */
 .team .member {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .team .member .member-img {
-  margin: 0 80px;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .team .member .member-img {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1591,9 +1534,7 @@ section {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Servie Cards Section
---------------------------------------------------------------*/
+/* Services Cards */
 .services-cards h3 {
   font-size: 20px;
   font-weight: 700;
@@ -1617,20 +1558,13 @@ section {
   margin-right: 6px;
 }
 
-/*--------------------------------------------------------------
-# Projet Details Section
---------------------------------------------------------------*/
+/* Project Details */
 .project-details .section-header img {
   width: 50rem;
-  /* Adjust this value as needed */
   height: auto;
-  /* Maintains aspect ratio */
   max-width: 100%;
-  /* Ensures the image doesn’t exceed its container */
   margin-top: 10px;
-  /* Adds some spacing above the image */
 }
-
 
 .project-details .portfolio-details-slider img {
   width: 100%;
@@ -1797,9 +1731,7 @@ section {
   padding: 0;
 }
 
-/*--------------------------------------------------------------
-# Service Details Section
---------------------------------------------------------------*/
+/* Service Details */
 .service-details .services-list {
   padding: 10px 30px;
   border: 1px solid #d5d7da;
@@ -1862,9 +1794,7 @@ section {
   color: var(--warna-pertama);
 }
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
+/* Contact */
 .contact .info-item {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
   padding: 20px 0 30px 0;
@@ -1992,9 +1922,14 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Recent Blog Posts Section
---------------------------------------------------------------*/
+/* Recent Blog Posts */
+.landscape-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .recent-blog-posts .post-item {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
   transition: 0.3s;
@@ -2067,43 +2002,38 @@ section {
   transform: scale(1.1);
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+/* Hero Section */
 .hero {
   overflow-x: hidden;
   padding: 0;
   position: relative;
   height: 100vh;
-  /* Ensure hero section takes full viewport height */
 }
 
-.hero .video-section {
-  margin: 0;
-  padding: 0;
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7); /* Mengatur kecerahan */
+  position: absolute;
+  inset: 0;
+  z-index: 1;
 }
 
 .hero .row {
   margin: 0;
-  /* Pastikan tidak ada margin yang berlebihan */
 }
 
 .hero .carousel-item {
   margin: 0;
-  /* Pastikan tidak ada margin pada item carousel */
-}
-
-.hero .carousel-item video {
-  object-fit: cover;
-  /* Menjaga aspek rasio video */
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  /* Mengatur posisi video */
-  top: 0;
-  /* Menjaga video di bagian atas */
-  left: 0;
-  /* Menjaga video di bagian kiri */
 }
 
 .hero .carousel {
@@ -2112,7 +2042,6 @@ section {
   width: 100%;
   height: 100%;
   z-index: 1;
-  /* Carousel behind the content */
 }
 
 .hero .carousel-inner {
@@ -2125,48 +2054,26 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  /* Ensure full height */
   position: relative;
-  /* Ensure it fills the container */
 }
 
 .hero .carousel-item::before {
   content: "";
   background-color: rgba(0, 0, 0, 0.7);
-  /* Mengatur kegelapan overlay */
   position: absolute;
   inset: 0;
   z-index: 1;
-  /* Pastikan overlay di atas video */
 }
-
 
 .hero .container {
   position: relative;
   z-index: 2;
-  /* Ensure content is above the carousel */
 }
 
 .hero .row {
   min-height: 100vh;
   position: relative;
-  /* Ensure row doesn't interfere with carousel controls */
   z-index: 2;
-  /* Ensure hero content is above carousel */
-}
-
-.hero .video-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero .video-section iframe {
-  aspect-ratio: 16 / 9;
-  height: auto;
-  width: 100%;
-  border: 0;
-  /* Remove default border */
 }
 
 .hero .text-section {
@@ -2198,126 +2105,47 @@ section {
   color: #fff;
   border: 2px solid var(--warna-pertama);
   text-decoration: none;
-  /* Remove underline */
+  /* Remove Underline */
 }
 
 .hero .text-section .btn-get-started:hover {
   background: var(--warna-pertama);
 }
 
-/* Carousel Controls */
-.hero .carousel-control-prev,
-.hero .carousel-control-next {
-  z-index: 3;
-  /* Ensure controls are above the carousel */
-  width: 50px;
-  /* Size of controls */
-  height: 50px;
-  /* Size of controls */
-  top: 50%;
-  /* Center vertically */
-  transform: translateY(-50%);
-  /* Center vertically */
-}
-
-.hero .carousel-control-prev-icon,
-.hero .carousel-control-next-icon {
-  border-radius: 50%;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.hero .carousel-control-prev-icon {
-  background-image: none;
-  /* Remove background image as we are using icon classes */
-}
-
-.hero .carousel-control-next-icon {
-  background-image: none;
-  /* Remove background image as we are using icon classes */
-}
-
-.hero .carousel-control-prev .bi-chevron-left,
-.hero .carousel-control-next .bi-chevron-right {
-  font-size: 24px;
-  /* Size of icons */
-  color: #fff;
-  /* Ensure icons are visible */
-}
-
-/* Mobile-specific styles */
+/* Mobile-Specific Styles */
 @media (max-width: 768px) {
   .hero {
     height: 100vh;
-    /* Pastikan tinggi hero section penuh */
     overflow: hidden;
-    /* Menghindari elemen lain muncul di bawah */
     padding-top: 80px;
-    /* Tambahkan padding atas untuk memberi ruang */
   }
 
   .hero .row {
     min-height: 10vh;
     position: relative;
-    /* Ensure row doesn't interfere with carousel controls */
     z-index: 2;
-    /* Ensure hero content is above carousel */
-  }
-
-  .hero .video-section {
-    margin-top: 15px;
-  }
-
-  .hero .video-section iframe {
-    aspect-ratio: 16 / 9;
-    height: 100%;
-    /* Ensure iframe takes full height */
-    width: 100%;
-    /* Ensure iframe takes full width */
-  }
-
-  .hero .carousel-control-prev,
-  .hero .carousel-control-next {
-    width: 40px;
-    /* Smaller controls for mobile */
-    height: 40px;
-  }
-
-  .hero .carousel-control-prev .bi-chevron-left,
-  .hero .carousel-control-next .bi-chevron-right {
-    font-size: 20px;
-    /* Smaller icons for mobile */
   }
 
   .hero .text-section {
     text-align: center;
-    /* Center align text for mobile */
     padding: 20px;
-    /* Add padding for mobile */
   }
 
   .hero .text-section h2 {
     font-size: 36px;
-    /* Smaller font size for mobile */
   }
 
   .hero .text-section p {
     font-size: 16px;
-    /* Smaller font size for mobile */
   }
 
   .hero .text-section .btn-get-started {
     font-size: 14px;
-    /* Smaller button text for mobile */
     padding: 10px 30px;
-    /* Adjust button padding for mobile */
   }
 }
 
-
-/*--------------------------------------------------------------
-# Blog
---------------------------------------------------------------*/
+/* Blog */
 .blog .blog-pagination {
   margin-top: 30px;
   color: #838893;
@@ -2354,9 +2182,7 @@ section {
   color: var(--color-white);
 }
 
-/*--------------------------------------------------------------
-# Blog Posts List
---------------------------------------------------------------*/
+/* Blog Posts List */
 .blog .posts-list .post-item {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.06);
   transition: 0.3s;
@@ -2433,9 +2259,7 @@ section {
   transform: scale(1.1);
 }
 
-/*--------------------------------------------------------------
-# Blog Details
---------------------------------------------------------------*/
+/* Blog Details */
 .blog .blog-details {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -2594,11 +2418,63 @@ section {
   padding: 20px;
   margin-top: 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
 .blog .post-author img {
-  max-width: 120px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .blog .post-author img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
+
+  .blog .post-author {
+    padding: 15px;
+  }
+
+  .blog .post-author .social-links {
+    margin: 0 10px 10px 0;
+    justify-content: flex-start;
+  }
+
+  .blog .blog-details .meta-top ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .blog .blog-details .meta-top ul li+li {
+    padding-left: 0;
+  }
+
+  .blog .blog-details .content blockquote {
+    overflow: hidden;
+    background-color: rgba(82, 86, 94, 0.06);
+    padding: 40px;
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .blog .blog-details .content blockquote p {
+    color: var(--warna-default);
+    line-height: 1.6;
+    margin-bottom: 0;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+  }
 }
 
 .blog .post-author h4 {
@@ -2624,9 +2500,7 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Blog Sidebar
---------------------------------------------------------------*/
+/* Blog Sidebar */
 .blog .sidebar {
   padding: 30px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -2816,9 +2690,7 @@ section {
   font-size: 14px;
 }
 
-/*--------------------------------------------------------------
-# Blog Comments
---------------------------------------------------------------*/
+/* Blog Comments */
 .blog .comments {
   margin-top: 30px;
 }
@@ -2928,12 +2800,10 @@ section {
   background-color: var(--warna-pertama);
 }
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+/* Footer */
 .footer {
   color: #fff;
-  background: url("https://res.cloudinary.com/annafikk/image/upload/v1726065852/11-9-24-ngingas_pdivpe.jpg") top center no-repeat;
+  background: url("/assets/img/footer.jpg") top center no-repeat;
   background-size: cover;
   font-size: 14px;
   padding: 80px 0 60px 0;
@@ -3048,123 +2918,72 @@ section {
 @media (max-width: 768px) {
   .footer {
     padding: 80px 20px 60px 20px;
-    /* Menambahkan padding kiri dan kanan */
     text-align: center;
-    /* Mengatur teks di tengah */
   }
 
   .footer .footer-content {
     margin-left: 0;
-    /* Menghapus margin kiri */
     margin-right: 0;
-    /* Menghapus margin kanan */
   }
 
   .footer-links {
     display: none;
-    /* Menyembunyikan footer links di mobile */
   }
 
   .social-links {
     display: flex;
-    /* Pastikan ini diatur */
     justify-content: center;
-    /* Pusatkan secara horizontal */
     margin-top: 1rem;
-    /* Jarak atas */
   }
 
   .social-links a {
     margin: 0 10px;
-    /* Jarak antar ikon */
     color: #fff;
-    /* Warna ikon */
     text-decoration: none;
-    /* Hapus garis bawah */
   }
 
   .social-links a:hover {
     color: var(--warna-pertama);
-    /* Ganti warna saat hover */
   }
 
 }
 
-/* Sweetalert2 */
+/* Cookies Pop Up */
 .swal2-popup {
   font-size: 1rem;
-  /* Ukuran font default */
   max-width: 50vw;
-  /* Lebar maksimum */
   padding: 1rem;
-  /* Padding untuk seluruh popup */
   border-radius: 10px;
-  /* Sudut yang lebih halus */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  /* Efek bayangan */
   background-color: #fff;
-  /* Warna latar belakang */
 }
 
 .swal2-title {
   font-size: 1.5rem;
-  /* Ukuran font judul */
   word-break: break-word;
-  /* Memastikan kata tidak terputus */
   margin-bottom: 0.5rem;
-  /* Ruang di bawah judul */
   color: #333;
-  /* Warna teks */
 }
 
 .swal2-content {
   font-size: 1rem;
-  /* Ukuran font konten */
   word-break: break-word;
-  /* Memastikan kata tidak terputus */
   color: #555;
-  /* Warna teks */
 }
 
 @media (max-width: 600px) {
   .swal2-popup {
     font-size: 0.9rem;
-    /* Ukuran font untuk mobile */
     padding: 0.8rem;
-    /* Mengurangi padding di mobile */
     max-width: 90vw;
-    /* Lebar maksimum lebih besar di mobile */
   }
 
   .swal2-title {
     font-size: 1.2rem;
-    /* Ukuran judul untuk mobile */
     margin-bottom: 0.3rem;
-    /* Mengurangi ruang di bawah judul */
   }
 
   .swal2-content {
     font-size: 0.9rem;
-    /* Ukuran konten untuk mobile */
-  }
-}
-
-/* CTA */
-.call-action-btn {
-  display: flex;
-  justify-content: center;
-  /* Memastikan tombol di tengah */
-  align-items: center;
-  height: 100%;
-  /* Pastikan elemen ini mengambil tinggi penuh kolom */
-}
-
-/* Tambahkan media query untuk desktop */
-@media (min-width: 768px) {
-
-  /* Sesuaikan dengan breakpoint yang Anda gunakan */
-  .call-action-btn {
-    justify-content: center;
-    /* Tetap di tengah untuk desktop */
   }
 }
