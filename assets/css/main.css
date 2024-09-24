@@ -838,9 +838,13 @@ section {
 
 /* Services */
 .services .service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 40px;
   background: #fff;
   height: 100%;
+  text-align: center;
 }
 
 .services .service-item .icon {
@@ -882,12 +886,14 @@ section {
   display: inline-block;
   border-bottom: 4px solid #ebebed;
   transition: 0.3s;
+  text-align: center; /* Menambahkan properti ini */
 }
 
 .services .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .services .service-item .readmore {
